@@ -1,62 +1,167 @@
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    background-image: url('africa.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-}
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akrobeto - Meme Culture</title>
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akrobeto-meme.github.io/unicorn/">
+  <meta property="og:title" content="Akrobeto - Meme Culture">
+  <meta property="og:description" content="Explore the humor and influence of Akrobeto in the world of memes.">
+  <meta property="og:image" content="akrobeto.png">
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional styles for the mute button */
+    .mute-button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #E07A5F;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
 
-header {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 15px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
+    .mute-button:hover {
+      background-color: #A64B00;
+      transform: scale(1.05);
+    }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
+    /* Styles for the video grid */
+    .video-grid {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
 
-header h1 {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    margin: 0;
-}
+    .video-container {
+      flex: 1 1 48%;
+      max-width: 48%;
+    }
 
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+    @media (max-width: 768px) {
+      .video-container {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
 
-header nav ul li {
-    display: inline;
-}
+    /* Style for the motto */
+    .motto {
+      font-size: 18px;
+      font-weight: 600;
+      color: #E07A5F;
+      text-align: center;
+      margin: 10px 0;
+    }
+  </style>
+</head>
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color
+<body>
+  <header>
+    <div class="container">
+      <h1>Akrobeto</h1>
+      <p class="motto">God Have Mercy Upon Us</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#how-to-buy">How to Buy</a></li>
+          <li><a href="#tokenomics">Tokenomics</a></li>
+          <li><a href="#roadmap">Roadmap</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="video">
+      <div class="container">
+        <h2>Watch Akrobeto</h2>
+        <div class="video-grid">
+          <div class="video-container">
+            <iframe id="akrobeto-video-2" width="100%" height="315" src="https://www.youtube.com/embed/DFcdBpHKMVo?autoplay=1&loop=1&playlist=DFcdBpHKMVo&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="mute-button" onclick="toggleMute(2)">Unmute Video</button>
+          </div>
+          <div class="video-container">
+            <iframe id="akrobeto-video-1" width="100%" height="315" src="https://www.youtube.com/embed/GY6ITEWWG6c?autoplay=1&loop=1&playlist=GY6ITEWWG6c&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <button class="mute-button" onclick="toggleMute(1)">Unmute Video</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About Akrobeto</h2>
+        <p>Akrobeto, a renowned actor and comedian from Ghana, has become a global meme sensation. Known for his expressive delivery and humorous takes, Akrobeto has captured the hearts of many across the internet. We aim to bring Akrobeto into the world of Web3, leveraging his popularity to create new and exciting opportunities.</p>
+        <img src="akrobeto.png" alt="Image of Akrobeto" class="center-image">
+      </div>
+    </section>
+
+    <section id="tokenomics">
+      <div class="container">
+        <h2>Tokenomics</h2>
+        <p>Akrobeto is an interchain token available on multiple blockchain networks, including Base, BNB Chain, and Ethereum. This multi-chain support allows for canonical versions of the token across these blockchains, all sharing a single EVM address. This feature enhances accessibility and enables seamless transactions across platforms. Additional chains can be added based on community demand, ensuring Akrobeto remains adaptable and user-focused.</p>
+      </div>
+    </section>
+
+    <section id="how-to-buy">
+      <div class="container">
+        <h2>How to Buy</h2>
+        <p>To become a part of the Akrobeto meme culture, follow our guide on how to buy and engage with Akrobeto-related content and tokens.</p>
+      </div>
+    </section>
+
+    <section id="roadmap">
+      <div class="container">
+        <h2>Roadmap</h2>
+        <p>We don't have time for bullshit</p>
+        <ul>
+          <li><strong>Phase 1:</strong> Attract early adopters and true believers</li>
+          <li><strong>Phase 2:</strong> Launch massive marketing campaigns and secure listings</li>
+          <li><strong>Phase 3:</strong> Rise to the top 5 meme coins... or even claim the number one spot!</li>
+          <li><strong>Phase 4:</strong> Make Africa great again! unlock its full potential!</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="motto">God Have Mercy Upon Us</p>
+      <p>&copy; 2024 Akrobeto - Meme Culture. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMute(videoId) {
+      const iframe = document.getElementById(`akrobeto-video-${videoId}`);
+      const button = document.querySelector(`#akrobeto-video-${videoId} + .mute-button`);
+      const url = new URL(iframe.src);
+
+      // Toggle mute parameter
+      const isMuted = url.searchParams.get('mute') === '1';
+      url.searchParams.set('mute', isMuted ? '0' : '1');
+
+      // Update button text immediately
+      button.textContent = isMuted ? 'Mute Video' : 'Unmute Video';
+
+      // Reload the iframe with updated URL
+      iframe.src = url.toString();
+    }
+  </script>
+
+</body>
+
+</html>
